@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JACK COFFEE</title>
+	<title></title>
 
 
 	<!-- fonts -->
@@ -18,6 +18,61 @@
 
 	<!-- aLpine js  -->
 	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<style>
+		body {
+		  font-family: 'Poppins', sans-serif;
+		  margin: 0;
+		  padding: 0;
+		}
+		.menu {
+		  padding: 20px;
+		}
+		.menu h2 {
+		  text-align: center;
+		}
+		.row {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  gap: 20px;
+		}
+		.menu-cart {
+		  border: 1px solid #ccc;
+		  border-radius: 8px;
+		  width: 200px;
+		  padding: 10px;
+		  text-align: center;
+		}
+		.menu-cart-img {
+		  width: 100%;
+		  height: 150px;
+		  object-fit: cover;
+		  border-radius: 8px;
+		}
+		.menu-cart-tittle {
+		  margin: 10px 0;
+		}
+		.menu-cart-price {
+		  color: #888;
+		}
+		.ratting i {
+		  color: gold;
+		}
+		.whatsapp-order-button {
+		  display: inline-block;
+		  margin-top: 8px;
+		  padding: 8px 12px;
+		  background-color: #25D366;
+		  color: white;
+		  border-radius: 5px;
+		  text-decoration: none;
+		  font-weight: bold;
+		  transition: background-color 0.3s ease;
+		}
+		.whatsapp-order-button:hover {
+		  background-color: #1ebe5b;
+		}
+	  </style>
 
 </head>
 <body>
@@ -25,12 +80,12 @@
 	<!-- navbar start -->
 
 	<nav class="navbar" x-data>
-		<a href="#" class="navbar-logo">Jack <span>Coffee</span></a>
+		<a href="#" class="navbar-logo">Roemah Snack  <span>Keysha</span></a>
 			<div class="navbar-nav">
 				<a href="#home">Home</a>
 				<a href="#menu">Menu</a>
-				<a href="#about"> About</a>
-				<a href="#contact">Contact</a>
+				<a href="#about"> Tentang</a>
+				<!-- <a href="#contact">Kontak</a> -->
 			</div>
 
 			<div class="navbar-extra">
@@ -53,7 +108,7 @@
 						<section class="cart-shop" >
 							<template x-for="(item, index) in $store.shoppingCart.items" x-keys="index">
 								<div class="cart-item">
-									<img :src="`./imghtml/${item.img}`" :alt="item.nama" class="cart-img">
+									<!-- <img :src="`./imghtml/${item.img}`" :alt="item.nama" class="cart-img"> -->
 									<!-- <img :src="`./imghtml/${item.img}`" :alt="item.name" class="favoryt-product-img"> -->
 									<div class="item-detail">
 										<h3 x-text="item.name"></h3>
@@ -100,8 +155,8 @@
 <section class="hero-start" id="home">
 
 	<main class="content">
-		<h1>Enjoy <span>Coffe</span> Get Lots of Inspiration</h1>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, corporis.</p>
+		<h1>JAJAN <span>SNACK</span></h1>
+				<p>Pesan snack sekarang agar kalian bisa mendapatkan hadiah miliaran dolar monopoli</p>
 		<a href="#menu" class="call-to-action">Pesan Sekarang</a>
 	
 	</main>
@@ -113,167 +168,113 @@
 	
 <!-- menu section star -->
 <section id="menu" class="menu">
-	
-	<h2>Our<span> Menu</span></h2>
+    <h2>Menu <span>Kita</span></h2>
+    <div class="row">
+      
+      <!-- Product 1 -->
+      <div class="menu-cart">
+        <img src="./imghtml/cookiesNanas.jpeg" alt="Cookies Nanas" class="menu-cart-img">
+        <h3 class="menu-cart-tittle">Cookies Nanas</h3>
+        <p class="menu-cart-price">IDR 27.500</p>
+        <div class="ratting">
+          <i data-feather="star"></i><i data-feather="star"></i>
+          <i data-feather="star"></i><i data-feather="star"></i><i data-feather="star"></i>
+        </div>
+        <a 
+          class="whatsapp-order-button" 
+          target="_blank" 
+          href="https://wa.me/628128364195?text=Halo%20saya%20ingin%20memesan%20Cookies%20Nanas">
+          Pesan via WhatsApp
+        </a>
+      </div>
 
-	<div class="content" id="content">
-				<p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate maiores quam nobis suscipit alias accusamus?</p>
-				
-				<div class="row">
-					<div class="menu-cart">
-						<img src="./imghtml/gambar-1.jpg" alt="espresso" class="menu-cart-img">
-						<a href="#menu" id="cart-shop-product"><I data-feather="shopping-cart" ></I>+</a>
-						<h3 class="menu-cart-tittle"> Espresso</h3>
-						<p class="menu-cart-price">IDR 50k <span>IDR 25k</span></p>
+      <!-- Product 2 -->
+      <div class="menu-cart">
+        <img src="./imghtml/ekadoAyam.jpeg" alt="Ekado Ayam" class="menu-cart-img">
+        <h3 class="menu-cart-tittle">Ekado Ayam</h3>
+        <p class="menu-cart-price">IDR 29.000</p>
+        <div class="ratting">
+          <i data-feather="star"></i><i data-feather="star"></i>
+          <i data-feather="star"></i><i data-feather="star"></i><i data-feather="star"></i>
+        </div>
+        <a 
+          class="whatsapp-order-button" 
+          target="_blank" 
+          href="https://wa.me/628128364195?text=Halo%20saya%20ingin%20memesan%20Ekado%20Ayam">
+          Pesan via WhatsApp
+        </a>
+      </div>
 
-						<div class="ratting">
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-						</div>
-					</div>
+      <!-- Product 3 -->
+      <div class="menu-cart">
+        <img src="./imghtml/kacangAlmond.jpeg" alt="Almond Panggang" class="menu-cart-img">
+        <h3 class="menu-cart-tittle">Almond Panggang</h3>
+        <p class="menu-cart-price">IDR 50.000</p>
+        <div class="ratting">
+          <i data-feather="star"></i><i data-feather="star"></i>
+          <i data-feather="star"></i><i data-feather="star"></i><i data-feather="star"></i>
+        </div>
+        <a 
+          class="whatsapp-order-button" 
+          target="_blank" 
+          href="https://wa.me/628128364195?text=Halo%20saya%20ingin%20memesan%20Almond%20Panggang">
+          Pesan via WhatsApp
+        </a>
+      </div>
 
-					<div class="menu-cart">
-						<img src="./imghtml/gambar-2.jpg" alt="espresso" class="menu-cart-img">
-						<a href="#menu" id="cart-shop-product"><I data-feather="shopping-cart" ></I>+</a>
-						<h3 class="menu-cart-tittle">Cappucino</h3>
-						<p class="menu-cart-price">IDR 75.5k</p>
-						<div class="ratting">
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-						</div>
-					</div>
+      <!-- Product 4 -->
+      <div class="menu-cart">
+        <img src="./imghtml/pasteldang.jpeg" alt="Pastel Udang" class="menu-cart-img">
+        <h3 class="menu-cart-tittle">Pastel Udang</h3>
+        <p class="menu-cart-price">IDR 22.500</p>
+        <div class="ratting">
+          <i data-feather="star"></i><i data-feather="star"></i>
+          <i data-feather="star"></i><i data-feather="star"></i><i data-feather="star"></i>
+        </div>
+        <a 
+          class="whatsapp-order-button" 
+          target="_blank" 
+          href="https://wa.me/628128364195?text=Halo%20saya%20ingin%20memesan%20Pastel%20Udang">
+          Pesan via WhatsApp
+        </a>
+      </div>
 
-					<div class="menu-cart">
-						<img src="./imghtml/gambar-3.jpg" alt="espresso" class="menu-cart-img">
-						<a href="#menu" id="cart-shop-product"><I data-feather="shopping-cart" ></I>+</a>
-						<h3 class="menu-cart-tittle">Latte</h3>
-						<p class="menu-cart-price">IDR 55k</p>
-						<div class="ratting">
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-						</div>
-					</div>
+      <!-- Product 5 -->
+      <div class="menu-cart">
+        <img src="./imghtml/samosaAyam.jpeg" alt="Samosa Ayam" class="menu-cart-img">
+        <h3 class="menu-cart-tittle">Samosa Ayam</h3>
+        <p class="menu-cart-price">IDR 27.500</p>
+        <div class="ratting">
+          <i data-feather="star"></i><i data-feather="star"></i>
+          <i data-feather="star"></i><i data-feather="star"></i><i data-feather="star"></i>
+        </div>
+        <a 
+          class="whatsapp-order-button" 
+          target="_blank" 
+          href="https://wa.me/628128364195?text=Halo%20saya%20ingin%20memesan%20Samosa%20Ayam">
+          Pesan via WhatsApp
+        </a>
+      </div>
 
-					<div class="menu-cart">
-						<img src="./imghtml/gambar-4.jpg" alt="espresso" class="menu-cart-img">
-						<a href="#menu" id="cart-shop-product"><I data-feather="shopping-cart" ></I>+</a>
-						<h3 class="menu-cart-tittle">Arabica</h3>
-						<p class="menu-cart-price">IDR 80k</p>
-						<div class="ratting">
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-						</div>
-					</div>
+      <!-- Product 6 -->
+      <div class="menu-cart">
+        <img src="./imghtml/SrollUdangPedas.jpeg" alt="Spring Roll Udang" class="menu-cart-img">
+        <h3 class="menu-cart-tittle">Spring Roll Udang</h3>
+        <p class="menu-cart-price">IDR 14.500</p>
+        <div class="ratting">
+          <i data-feather="star"></i><i data-feather="star"></i>
+          <i data-feather="star"></i><i data-feather="star"></i><i data-feather="star"></i>
+        </div>
+        <a 
+          class="whatsapp-order-button" 
+          target="_blank" 
+          href="https://wa.me/628128364195?text=Halo%20saya%20ingin%20memesan%20Spring%20Roll%20Udang">
+          Pesan via WhatsApp
+        </a>
+      </div>
 
-					<div class="menu-cart">
-						<img src="./imghtml/gambar-5.jpg" alt="espresso" class="menu-cart-img">
-						<a href="#menu" id="cart-shop-product"><I data-feather="shopping-cart" ></I>+</a>
-						<h3 class="menu-cart-tittle">Robusta</h3>
-						<p class="menu-cart-price">IDR 100k</p>
-						<div class="ratting">
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-						</div>
-					</div>
-
-					<div class="menu-cart">
-						<img src="./imghtml/gambar-6.jpg" alt="espresso" class="menu-cart-img">
-						<a href="#menu" id="cart-shop-product"><I data-feather="shopping-cart" ></I>+</a>
-						<h3 class="menu-cart-tittle">Kapal Api</h3>
-						<p class="menu-cart-price">IDR 14.5k</p>
-						<div class="ratting">
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-							<i data-feather="star"></i>
-						</div>
-					</div>
-				</div>
-			
-	</div>	     
-
-<!-- favorit produk ============================================================================================= -->
-<section class="product-favoryt" x-data="product"> <!-- ambil data dari apps.js (product)-->
-	<div class="row">
-		<!-- looping data product di sini  -->
-		<template x-for="(item, index) in items" x-key="index"> <!-- looping object item -->
-			<div class="product-cart">
-				<div class="icon">
-					<a href="#" @click.prevent="$store.shoppingCart.add(item)">
-						<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<use href="imghtml/feather-sprite.svg#shopping-cart" />
-					  </svg>
-					</a>
-					<a href="#" class="view-dettile">
-						<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<use href="imghtml/feather-sprite.svg#eye" />
-					  </svg>
-					</a>
-				</div>
-
-				<div class="image-product">
-					<img :src="`./imghtml/${item.img}`" :alt="item.name" class="favoryt-product-img">
-				</div>
-
-				<div class="product-content">
-					<h3 x-text="item.name"></h3>
-					<div class="ratting">
-						<svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<use href="imghtml/feather-sprite.svg#star" />
-					  </svg>
-					  <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<use href="imghtml/feather-sprite.svg#star" />
-					  </svg>
-					  <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<use href="imghtml/feather-sprite.svg#star" />
-					  </svg>
-					  <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<use href="imghtml/feather-sprite.svg#star" />
-					  </svg>
-					  <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<use href="imghtml/feather-sprite.svg#star" />
-					  </svg>
-					  
-					</div>
-				<p x-text="rupiah(item.price)" class="price"></p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, doloremque assumenda? Illo, voluptas. Doloribus, officia.</p>	
-				</div>
-			</div>
-		</template>
-	</div>
-</section>
-
-<!-- favorit produk ============================================================================================= -->
+    </div>
+  </section>
 
 <!-- modal box start =================================================================== -->
 <section class="modal-box">
@@ -283,7 +284,7 @@
 		<a href="#"  class="close-icon"><i data-feather="x"></i></a>
 
 		<div class="content">
-				<img src="./imghtml/gambar-6.jpg" alt="espresso" class="modal-box-img">
+				<img src="./imghtml/6ide.jpeg" alt="espresso" class="modal-box-img">
 			   <h1>product one</12>
 			   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt molestias excepturi ad, laborum corrupti?</p>
 			 <div class="back-cart-shop">
@@ -308,62 +309,22 @@
 <!-- modal box end =================================================================== -->
 
 <section id="about" class="about">
-	<h2><span>About</span> us</h2>
+	<h2><span>Tentang</span> Kami</h2>
 
 
 	<div class="row">
 			<div class="about-img">
-				<img src="./imghtml/Tentang-kami.jpg" alt="Tentang Kami">	
+				<img src="./imghtml/6ide.jpeg" alt="Tentang Kami">	
 			</div>
 
 		<div class="content">
-				<h3>Mari <span>Ngopi</span></h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus maxime dolorem incidunt, tempore, labore asperiores.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis eos laudantium enim amet deleniti impedit error magni.</p>
+				<h3>Mari <span>Jajan Snack</span></h3>
+					<p>"Jajan di warung kami bukan hanya tentang memuaskan rasa lapar, tapi juga tentang menikmati momen bahagia bersama keluarga dan teman-teman, serta memulai hari dengan energi positif dan semangat baru!"</p>
+					
 		</div>
 	</div>
 
 </section>
-<!-- abour section end -->
-
-<!-- section kontak start =================================================-->
-
-<section class="kontak" id="contact">
-
-	<h3><span>Contact</span> us</h3>
-
-	<div class="row">
-
-		<div class="row-maps">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15862.935229014463!2d107.10095747960496!3d-6.298667973857942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699ab2980253cf%3A0x9d95c3cd470530ea!2sJl.%20Jarakosta%2C%20Kec.%20Cikarang%20Bar.%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017530!5e0!3m2!1sid!2sid!4v1708357511995!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="gMaps"></iframe>
-		</div>
-
-
-		<form action="">
-
-			<div class="input-groub">
-				<i data-feather="user"></i>
-				<input type="text" placeholder="nama">
-			</div>
-
-			<div class="input-groub">
-				<i data-feather="mail"></i>
-				<input type="" placeholder="mail">
-			</div>
-
-			<div class="input-groub">
-				<i data-feather="phone"></i>
-				<input type="number" placeholder="Nohp">
-			</div>
-
-			<button type="submit" class="Tombol-kirim">Kirim</button>
-
-		</form>
-
-	</div>
-</section>
-
-<!-- section kontak end -->
  
 <!-- footer start -->
 	<footer>
