@@ -179,7 +179,7 @@ body{
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
-	background-image: url('./imghtml/KiosDesa.jpeg');
+	background-image: url('https://zakkimusthofa.github.io/jajanSnack/imghtml/KiosDesa.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
